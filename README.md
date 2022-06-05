@@ -1,5 +1,5 @@
 # JavaGeekBrains
-Домашнее задание по курсу Java Level 2
+Домашнее задание по курсу Java Core. Level 2
 
 Урок 1. ООП Java
 
