@@ -23,6 +23,8 @@ public class HW_1 {
                 barriers.cross(players);
             }
         }
+
+
     }
 }
 
