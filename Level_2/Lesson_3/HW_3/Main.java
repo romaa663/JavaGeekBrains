@@ -5,11 +5,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Задание 1
-        /*String[] arrayString = {"Англия", "Америка", "Россия", "Дания", "Англия", "Австрия",
+        String[] arrayString = {"Англия", "Америка", "Россия", "Дания", "Англия", "Австрия",
                 "Германия", "Россия", "Англия", "Дания", "Египет", "Россия"};
         countString(arrayString);
         System.out.println();
-        countStringCollections(arrayString);*/
+        countStringCollections(arrayString);
 
         //Задание 2
         PhoneBook phoneBook1 = new PhoneBook();
