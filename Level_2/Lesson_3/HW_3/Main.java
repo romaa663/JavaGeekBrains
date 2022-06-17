@@ -6,17 +6,17 @@ public class Main {
     public static void main(String[] args) {
         // Задание 1
         String[] arrayString = {"Англия", "Америка", "Россия", "Дания", "Англия", "Австрия",
-                "Германия", "Россия", "Англия", "Дания", "Египет", "Россия"};
+                                "Германия", "Россия", "Англия", "Дания", "Египет", "Россия"};
         countString(arrayString);
-        System.out.println();
         countStringCollections(arrayString);
+
 
         //Задание 2
         PhoneBook phoneBook1 = new PhoneBook();
-        phoneBook1.add("Иванов", 89356);
-        phoneBook1.add("Пупкин", 8954586);
-        phoneBook1.add("Смирнов", 8954758);
-        phoneBook1.add("Пупкин", 8545954);
+        phoneBook1.add("Иванов", "89356");
+        phoneBook1.add("Пупкин", "8954586");
+        phoneBook1.add("Смирнов", "8954758");
+        phoneBook1.add("Пупкин", "8545954");
         System.out.println(phoneBook1.getPhoneBook());
         System.out.println(phoneBook1.get("Пупкин"));
 
@@ -53,12 +53,13 @@ public class Main {
 
     // Задание 1. 2-й вариант решения (с коллекциями)
     private static void countStringCollections(String[] arrayString) {
-        HashSet<String> hashSet = new LinkedHashSet<>(Arrays.asList(arrayString));
+        Set<String> hashSet = new LinkedHashSet<>(Arrays.asList(arrayString));
         System.out.println("Уникальные слова: " + hashSet);
 
-        HashMap<String, Integer> hashMap = new LinkedHashMap<>();
+        Map<String, Integer> hashMap = new LinkedHashMap<>();
         for (String i : arrayString) {
-            hashMap.put(i, hashMap.getOrDefault(i, 0) + 1);
+            int count = hashMap.getOrDefault(i, 0) + 1;
+            hashMap.put(i, count);
         }
         System.out.println("Количество употреблений слов в массиве: " + hashMap);
     }
